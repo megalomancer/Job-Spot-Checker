@@ -70,7 +70,7 @@ async function buttonFunc() {
         const data = await res.json();
         //Throws a message if the API key is invalid.
         if (typeof data.company === "undefined") {
-            alert ("API failed to fetch. Check that your key is correct or haven't exceeded the API call limit.");
+            alert ("API failed to fetch. Check that your key is correct or that you haven't exceeded the API call limit.");
             break; //This is to prevent more than one alert from appearing.
         } else {
             document.getElementById(i).innerHTML += `|${data.company.employees_hired}/${data.company.employees_capacity}|`;
